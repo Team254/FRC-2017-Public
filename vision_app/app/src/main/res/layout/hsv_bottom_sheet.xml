@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popup_window"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center"
+    android:background="@android:color/white"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="H"
+            android:id="@+id/hLabel"
+            android:paddingRight="10dp"
+            android:paddingTop="23dp" />
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            rsb:absoluteMaxValue="255"
+            rsb:absoluteMinValue="0"
+            rsb:textAboveThumbsColor="@android:color/holo_blue_dark"
+            rsb:showLabels="false"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/hSeekBar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="S"
+            android:id="@+id/sLabel"
+            android:paddingRight="10dp"
+            android:paddingTop="23dp" />
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            rsb:absoluteMaxValue="255"
+            rsb:absoluteMinValue="0"
+            rsb:textAboveThumbsColor="@android:color/holo_blue_dark"
+            rsb:showLabels="false"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/sSeekBar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="V"
+            android:id="@+id/vLabel"
+            android:paddingRight="10dp"
+            android:paddingTop="23dp" />
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            rsb:absoluteMaxValue="255"
+            rsb:absoluteMinValue="0"
+            rsb:textAboveThumbsColor="@android:color/holo_blue_dark"
+            rsb:showLabels="false"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/vSeekBar" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restore Defaults"
+        android:id="@+id/restoreDefaultsButton"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

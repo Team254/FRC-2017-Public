@@ -1,0 +1,13 @@
+*.class
+build/
+bin/
+*~
+.idea/
+*.iml
+dist/
+sysProps.xml
+.DS_Store
+*.out
+*.dSYM/
+out/
+*.pyc

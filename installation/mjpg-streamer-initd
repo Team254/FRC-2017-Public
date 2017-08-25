@@ -1,0 +1,58 @@
+#!/bin/sh
+
+PREFIX=/usr/local
+PLUGINS=${PREFIX}/lib/mjpg-streamer
+source /etc/default/mjpg-streamer
+
+startdaemon() {
+  for i in $(seq 1 4); do
+    PIDFILE="${PIDFILE[$i]}"
+    if [ ! -z "$PIDFILE" ]; then
+
+      echo -n "Starting mjpg-streamer (camera $i)"
+
+      FPS="${FPS[$i]}"
+      RES="${RESOLUTION[$i]}"
+      PORT="${PORT[$i]}"
+      INPUT="${INPUT[$i]} -f $FPS -r $RES"
+      OUTPUT="${OUTPUT[$i]} -p ${PORT}"
+
+      v4l2-ctl -c focus_auto=0 -d /dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_0297F65F-video-index0
+
+      /usr/sbin/start-stop-daemon --pidfile=$PIDFILE -b -m \
+        --exec ${PREFIX}/bin/mjpg_streamer --start -- \
+          -i "${PLUGINS}/${INPUT}" \
+          -o "${PLUGINS}/${OUTPUT}"
+
+      echo "."
+    fi
+  done  
+}
+
+stopdaemon() {
+  for i in $(seq 1 4); do
+    PIDFILE="${PIDFILE[$i]}"
+    if [ ! -z "$PIDFILE" ]; then
+      echo -n "Stopping mjpg-streamer (camera $i)"
+      /usr/sbin/start-stop-daemon --pidfile=$PIDFILE --stop --retry 3 && rm -f $PIDFILE
+      echo "."
+    fi 
+  done
+}
+
+case "$1" in
+  start)
+    startdaemon
+  ;;
+  stop)
+    stopdaemon
+  ;;
+  force-reload|restart|reload)
+    stopdaemon
+    startdaemon
+  ;;
+  *)
+    echo "Usage: {start|stop|restart|reload|force-reload}" >&2
+    exit 1
+  ;;
+esac

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/raw" android:title="Raw image" />
+        <item android:id="@+id/thresh" android:title="Threshholded image" />
+        <item android:id="@+id/targets" android:title="Targets" />
+        <item android:id="@+id/targets_plus" android:title="Targets plus" />
+    </group>
+</menu>

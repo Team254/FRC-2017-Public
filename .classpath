@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="var" path="wpilib" sourcepath="wpilib.sources"/>
+	<classpathentry kind="var" path="networktables" sourcepath="networktables.sources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-all-9.3.15.v20161220-uber.jar"/>
+	<classpathentry kind="var" path="opencv" sourcepath="opencv.sources"/>
+	<classpathentry kind="var" path="cscore" sourcepath="cscore.sources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="var" path="USERLIBS_DIR/CTRLib.jar"/>
+	<classpathentry kind="lib" path="lib/navx_frc.jar"/>
+	<classpathentry kind="lib" path="testlib/byte-buddy-1.2.1.jar"/>
+	<classpathentry kind="lib" path="testlib/cglib-nodep-2.2.2.jar"/>
+	<classpathentry kind="lib" path="testlib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="testlib/javassist-3.21.0-GA.jar"/>
+	<classpathentry kind="lib" path="testlib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="testlib/mockito-core-2.0.42-beta.jar"/>
+	<classpathentry kind="lib" path="testlib/objenesis-2.4.jar"/>
+	<classpathentry kind="lib" path="testlib/powermock-mockito2-1.6.6-full.jar"/>
+	<classpathentry kind="lib" path="lib/Jama-1.0.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

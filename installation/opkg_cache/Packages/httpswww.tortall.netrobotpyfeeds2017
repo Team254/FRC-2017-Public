@@ -1,0 +1,404 @@
+Package: ATLAS
+Version: 3.10.2
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: f13f5c52ee55f8602481819035bcec1f
+Size: 6666770
+Filename: ATLAS_3.10.2_cortexa9-vfpv3.ipk
+Description: Automatically Tuned Linear Algebra Software
+OE: ATLAS
+Homepage: http://www.vesperix.com/arm/atlas-arm/
+Depends: libgfortran3 (>= 4.8.2)
+Priority: optional
+
+
+Package: ATLAS-dev
+Version: 3.10.2
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 5ee97cdcf5e5cfabec77a5a1d70f6d28
+Size: 4037748
+Filename: ATLAS-dev_3.10.2_cortexa9-vfpv3.ipk
+Description: Automatically Tuned Linear Algebra Software (development files)
+OE: ATLAS
+Homepage: http://www.vesperix.com/arm/atlas-arm/
+Depends: ATLAS (= 3.10.2)
+Priority: optional
+
+
+Package: libgfortran3
+Version: 4.8.2-r0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 7a00989e8790a557fc0b73cdbce281e8
+Size: 227628
+Filename: libgfortran3_4.8.2-r0_cortexa9-vfpv3.ipk
+Description: Fortran runtime
+OE: libgfortran
+Homepage: http://gcc.gnu.org
+Priority: optional
+
+
+Package: mjpg-streamer
+Version: 2017.0.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 295260142fb42e3d212e21207b0ab512
+Size: 189650
+Filename: mjpg-streamer_2017.0.0_cortexa9-vfpv3.ipk
+Description: Sends video via MJPG stream
+OE: unknown
+Homepage: https://github.com/mjpg-streamer/mjpg-streamer
+Depends: libc6, libjpeg8, libv4l
+Priority: optional
+
+
+Package: mjpg-streamer-cv
+Version: 2017.0.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: a2fd12b3a1a841c397626bc9de5c958e
+Size: 21150
+Filename: mjpg-streamer-cv_2017.0.0_cortexa9-vfpv3.ipk
+Description: OpenCV plugin for mjpg-streamer
+OE: unknown
+Homepage: https://github.com/mjpg-streamer/mjpg-streamer
+Depends: mjpg-streamer (= 2017.0.0), opencv3  (= 3.2.0)
+Priority: optional
+
+
+Package: mjpg-streamer-py
+Version: 2017.0.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 5b18352361cc4fdd7751ac8062e630ef
+Size: 23910
+Filename: mjpg-streamer-py_2017.0.0_cortexa9-vfpv3.ipk
+Description: Python plugin for mjpg-streamer
+OE: unknown
+Homepage: https://github.com/mjpg-streamer/mjpg-streamer
+Depends: mjpg-streamer-cv (= 2017.0.0), python35-opencv3 (= 3.2.0)
+Priority: optional
+
+
+Package: mjpg-streamer-py
+Version: 2017.0.0-r1
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: e40d709234c10fda692972e968800e0c
+Size: 23910
+Filename: mjpg-streamer-py_2017.0.0-r1_cortexa9-vfpv3.ipk
+Description: Python plugin for mjpg-streamer
+OE: unknown
+Homepage: https://github.com/mjpg-streamer/mjpg-streamer
+Depends: mjpg-streamer-cv (= 2017.0.0), python36-opencv3 (= 3.2.0)
+Priority: optional
+
+
+Package: netconsole-host
+Version: 1.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 408f8ecaeb8da78cde2edcd5337a1631
+Size: 9684
+Filename: netconsole-host_1.0_cortexa9-vfpv3.ipk
+Description: FRC Netconsole Program
+OE: unknown
+Homepage: https://github.com/wpilibsuite/EclipsePlugins
+Depends: libc6
+Priority: optional
+
+
+Package: opencv3
+Version: 3.2.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: f3ca80c06def4f98635f87ac0b4356ba
+Size: 7256860
+Filename: opencv3_3.2.0_cortexa9-vfpv3.ipk
+Description: Open Source Computer Vision Library
+OE: unknown
+Homepage: http://opencv.org/
+Depends: libc6, libstdc++6
+Priority: optional
+
+
+Package: opencv3-dev
+Version: 3.2.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: dadfb9b35687cd6857ad69c78786b55b
+Size: 716158
+Filename: opencv3-dev_3.2.0_cortexa9-vfpv3.ipk
+Description: Open Source Computer Vision Library (development files)
+OE: unknown
+Homepage: http://opencv.org/
+Depends: opencv3 (= 3.2.0)
+Priority: optional
+
+
+Package: python36
+Version: 3.6.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 50981cf6f65eac85cb20f64ff1af0fbb
+Size: 10608572
+Filename: python36_3.6.0_cortexa9-vfpv3.ipk
+Description: Python programming language
+OE: python36
+Homepage: http://www.python.org
+Depends: libc6
+Priority: optional
+
+
+Package: python36
+Version: 3.6.0-r1
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 3b6e97de3a8335c3759d61191f21c644
+Size: 10613502
+Filename: python36_3.6.0-r1_cortexa9-vfpv3.ipk
+Description: Python programming language
+OE: python36
+Homepage: http://www.python.org
+Depends: libc6
+Priority: optional
+
+
+Package: python36-dbg
+Version: 3.6.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 4503ee88f57d7fbef5f7cff7467c140e
+Size: 4688276
+Filename: python36-dbg_3.6.0_cortexa9-vfpv3.ipk
+Description: Python programming language debug files
+OE: python36
+Homepage: http://www.python.org
+Depends: python36 (= 3.6.0)
+Priority: optional
+
+
+Package: python36-dbg
+Version: 3.6.0-r1
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 0288153a893d98f8b70d7f13ea7c0dbc
+Size: 4692552
+Filename: python36-dbg_3.6.0-r1_cortexa9-vfpv3.ipk
+Description: Python programming language debug files
+OE: python36
+Homepage: http://www.python.org
+Depends: python36 (= 3.6.0-r1)
+Priority: optional
+
+
+Package: python36-dev
+Version: 3.6.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 14c844c1a43209804fdea745f5151861
+Size: 5671298
+Filename: python36-dev_3.6.0_cortexa9-vfpv3.ipk
+Description: Python programming language development files
+OE: python36
+Homepage: http://www.python.org
+Depends: python36 (= 3.6.0)
+Priority: optional
+
+
+Package: python36-dev
+Version: 3.6.0-r1
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 67fe0142e5750e92ecf60be3f935637c
+Size: 5670902
+Filename: python36-dev_3.6.0-r1_cortexa9-vfpv3.ipk
+Description: Python programming language development files
+OE: python36
+Homepage: http://www.python.org
+Depends: python36 (= 3.6.0-r1)
+Priority: optional
+
+
+Package: python36-numpy
+Version: 1.12.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: eed6d02aecf05cdd558d301ea0067e2f
+Size: 6478988
+Filename: python36-numpy_1.12.0_cortexa9-vfpv3.ipk
+Description: NumPy: array processing for numbers, strings, records, and objects.
+OE: unknown
+Homepage: http://www.numpy.org
+Depends: python36, ATLAS (>= 3.10.2)
+Priority: optional
+
+
+Package: python36-opencv3
+Version: 3.2.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 0908f84b31400d36c10b9899c011619b
+Size: 657868
+Filename: python36-opencv3_3.2.0_cortexa9-vfpv3.ipk
+Description: Open Source Computer Vision Library (Python 3.6 bindings)
+OE: unknown
+Homepage: http://opencv.org/
+Depends: opencv3 (= 3.2.0), python36-numpy (>= 1.12.0)
+Priority: optional
+
+
+Package: python36-robotpy-cscore
+Version: 2017.0.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 33b275fb9c21501b20906ab5dd423da7
+Size: 443374
+Filename: python36-robotpy-cscore_2017.0.0_cortexa9-vfpv3.ipk
+Description: RobotPy bindings for cscore image processing library
+OE: unknown
+Homepage: https://github.com/robotpy/robotpy-cscore
+Depends: python36, python36-numpy, python36-opencv3 (>= 3.2.0)
+Priority: optional
+
+
+Package: python36-robotpy-cscore
+Version: 2017.0.0a2
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 50e6b7394e5c54d59839d63167a3f8b8
+Size: 399068
+Filename: python36-robotpy-cscore_2017.0.0a2_cortexa9-vfpv3.ipk
+Description: RobotPy bindings for cscore image processing library
+OE: unknown
+Homepage: https://github.com/robotpy/robotpy-cscore
+Depends: python36, python36-numpy, python36-opencv3 (>= 3.2.0)
+Priority: optional
+
+
+Package: python36-robotpy-cscore
+Version: 2017.0.0rc1
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 1b50314bebdfbb060299dd68ff526f04
+Size: 446108
+Filename: python36-robotpy-cscore_2017.0.0rc1_cortexa9-vfpv3.ipk
+Description: RobotPy bindings for cscore image processing library
+OE: unknown
+Homepage: https://github.com/robotpy/robotpy-cscore
+Depends: python36, python36-numpy, python36-opencv3 (>= 3.2.0)
+Priority: optional
+
+
+Package: python36-robotpy-cscore
+Version: 2017.0.0rc3
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: b585821bb7f2ebea7b03a78ece9ac9fe
+Size: 444076
+Filename: python36-robotpy-cscore_2017.0.0rc3_cortexa9-vfpv3.ipk
+Description: RobotPy bindings for cscore image processing library
+OE: unknown
+Homepage: https://github.com/robotpy/robotpy-cscore
+Depends: python36, python36-numpy, python36-opencv3 (>= 3.2.0)
+Priority: optional
+
+
+Package: python36-robotpy-cscore
+Version: 2017.0.1
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 5cd27787d299aa51aaec68e237f87588
+Size: 444948
+Filename: python36-robotpy-cscore_2017.0.1_cortexa9-vfpv3.ipk
+Description: RobotPy bindings for cscore image processing library
+OE: unknown
+Homepage: https://github.com/robotpy/robotpy-cscore
+Depends: python36, python36-numpy, python36-opencv3 (>= 3.2.0)
+Priority: optional
+
+
+Package: python36-robotpy-cscore
+Version: 2017.0.2
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 857a5c77eac51008bb831e7197d66afc
+Size: 448164
+Filename: python36-robotpy-cscore_2017.0.2_cortexa9-vfpv3.ipk
+Description: RobotPy bindings for cscore image processing library
+OE: unknown
+Homepage: https://github.com/robotpy/robotpy-cscore
+Depends: python36, python36-numpy, python36-opencv3 (>= 3.2.0)
+Priority: optional
+
+
+Package: python36-robotpy-ctre
+Version: 2017.0.0
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 011f91a706505a0b7b03e3f1840064a7
+Size: 282388
+Filename: python36-robotpy-ctre_2017.0.0_cortexa9-vfpv3.ipk
+Description: RobotPy bindings for CTRE third party libraries
+OE: unknown
+Homepage: unknown
+Depends: python36
+Priority: optional
+
+
+Package: python36-robotpy-ctre
+Version: 2017.0.1
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: d491fd31d296375dd0d40c3153f70d1d
+Size: 243378
+Filename: python36-robotpy-ctre_2017.0.1_cortexa9-vfpv3.ipk
+Description: RobotPy bindings for CTRE third party libraries
+OE: unknown
+Homepage: https://github.com/robotpy/robotpy-ctre
+Depends: python36
+Priority: optional
+
+
+Package: python36-robotpy-ctre
+Version: 2017.0.2
+Section: devel
+Architecture: cortexa9-vfpv3
+Maintainer: RobotPy Developers <robotpy@googlegroups.com>
+MD5Sum: 599bd1220607b74399a07d313e42871e
+Size: 244446
+Filename: python36-robotpy-ctre_2017.0.2_cortexa9-vfpv3.ipk
+Description: RobotPy bindings for CTRE third party libraries
+OE: unknown
+Homepage: https://github.com/robotpy/robotpy-ctre
+Depends: python36
+Priority: optional
+
+

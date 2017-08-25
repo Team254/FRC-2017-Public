@@ -1,0 +1,36 @@
+
+#######################################
+# First camera
+#######################################
+
+PIDFILE[1]=/var/run/mjpg-streamer1.pid
+
+INPUT[1]="input_uvc.so --device /dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_0297F65F-video-index0"
+# Frames per second
+FPS[1]=25
+RESOLUTION[1]="320x200"
+
+OUTPUT[1]="output_http.so -w /usr/local/share/mjpg-streamer/www"
+PORT[1]=5801
+
+#######################################
+# Second camera
+#######################################
+
+# Note: if you're using multiple cameras, you probably should be using 
+# persistent device paths (/dev/v4l/by-*) instead of /dev/videoX! See the
+# README for more details
+
+# If you wish to do two cameras, uncomment this
+#PIDFILE[2]=/var/run/mjpg-streamer2.pid
+
+INPUT[2]="input_uvc.so --device /dev/video1"
+# Frames per second
+FPS[2]=10
+RESOLUTION[2]="160x120"
+
+OUTPUT[2]="output_http.so -w /usr/local/share/mjpg-streamer/www"
+PORT[2]=5800
+
+# And so on... the init script will support up to 4 cameras, but in practice
+# you will be limited by USB bandwidth.

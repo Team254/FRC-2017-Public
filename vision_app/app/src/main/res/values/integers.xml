@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="default_h_min">40</integer>
+    <integer name="default_h_max">80</integer>
+    <integer name="default_s_min">100</integer>
+    <integer name="default_s_max">255</integer>
+    <integer name="default_v_min">30</integer>
+    <integer name="default_v_max">255</integer>
+</resources>

@@ -1,0 +1,107 @@
+
+body {
+	background-color: #eeeeee;
+	padding: 40px;
+}
+.booleanBoxFalse {
+    background-color: red;
+}
+
+.booleanBoxTrue {
+    background-color: green;
+}
+
+.topLineView {
+    overflow: auto;
+    width: 100%;
+}
+
+.firstPersonViewDiv {
+    height: 375px;
+    float: left;
+}
+
+.firstPersonViewImg {
+    height: 100%;
+}
+
+.hudBoxes {
+    width: 200px;
+    float: left;
+}
+
+#colorBox {
+    height: 375px;
+    padding:20px;
+}
+
+.boolBoxPadding {
+    height: 10%;
+}
+
+#onTargetBox {
+    height: 45%;
+}
+
+.autoSelector {
+    width: 200px;
+    float: left;
+}
+
+.laneSelector {
+    width: 150px;
+    float: left;
+}
+
+.extraDataNumbers {
+    width: 200px;
+    float: left;
+}
+.control {
+    margin-left: 10px;
+    float: right;
+    width:calc( 33% - 10px);
+}
+.leftBoxes{
+    float:left;
+    width:calc( 66% - 10px);
+}
+button.active {
+    background-color: green;
+    color:white;
+    border-style: none;
+}
+
+.errored {
+    color:#F00;
+    font-weight: bold;
+}
+
+.progress {
+    background-color: #DEDEDE;
+    height:40px;
+}
+.progress div {
+    width: 100%;
+    height:100%;
+    text-align: right;
+    background-color: #BBB;
+}
+.progress div p {
+    padding: 7 10 0 0;
+    font-weight: bold;
+}
+
+.progress.red div {
+    background-color: #F00;
+}
+
+.progress.green div {
+    background-color: green;
+}
+
+.progress.red div p, .progress.green div p {
+    color: #FFF;
+
+}
+

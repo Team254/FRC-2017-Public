@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <script type="text/javascript" src="jquery/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="Progress_Bar.js"></script>
+    <script type="text/javascript" src="canvasjs-1.8.0/jquery.canvasjs.min.js"></script>
+    <link rel="stylesheet" href="jquery/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+    <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/lumen.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body>
+    <!--<img src="http://10.2.54.2:5800/" alt="selfie-cam"></img>-->
+
+    <!-- things to show:
+         - have ball?
+         - on target?
+           - hood on target
+           - flywheel on target
+           - turret on target
+           - drive speed
+         - auton selector
+           - lane (1-5)
+           - portcullis/1 ball return/1 ball no return
+      -->
+    <div class="topLineView">
+      <div class="leftBoxes">
+        <div class="firstPersonViewDiv">
+          <!-- TODO: put the actual stream here -->
+          <img src="rubber_duck.jpg" class="firstPersonViewImg"/>
+        </div>
+        <div class="hudBoxes">
+          <div id="colorBox" style="background-color: orange;">UNKNOWN</div>
+        </div>
+      </div>
+      <div class="control">
+        <div class="autoSelector">
+          <div>
+            <b>Auto Mode:</b>
+            <div id="autoSelectorContainer"></div>
+            <div>Selected: <span id="selectedAutoMode">UNKNOWN</span></div>
+          </div>
+        </div>
+        <div class="extraDataNumbers">
+          <div>
+            <b>Air Pressure:<br/><span id="airPressureHolder">UNKNOWN</span></b>
+            <div class="progress" id="psi_progress" style="width:300px">
+              <div><p>Unknown Pressure</p></div>
+            </div>
+          </div>
+          <div>
+            <b>Camera: <div id="cameraBox" style="width:100%;height:80px">UNKNOWN</div></b>
+          </div>
+          <br/>
+        </div>
+      </div>
+    </div>
+
+    <div class="rawValues">
+      <div id="rawValuesContainer"></div>
+    </div>
+  </body>
+</html>

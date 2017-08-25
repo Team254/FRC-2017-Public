@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CheezDroid Goal Tracking</string>
+    <string name="request_permission">This app needs camera permission</string>
+
+    <string name="threshold_h_min_key">threshold_h_min_key</string>
+    <string name="threshold_h_max_key">threshold_h_max_key</string>
+    <string name="threshold_s_min_key">threshold_s_min_key</string>
+    <string name="threshold_s_max_key">threshold_s_max_key</string>
+    <string name="threshold_v_min_key">threshold_v_min_key</string>
+    <string name="threshold_v_max_key">threshold_v_max_key</string>
+
+    <string name="device_admin_label">CheezDroid</string>
+    <string name="device_admin_description">Enable device administration capabilities for CheezDroid for safe UI during matches.</string>
+
+</resources>

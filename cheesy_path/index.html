@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cheesy Path</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script src="blob.js"></script>
+    <script src="filesaver.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+	<style type="text/css">
+	* {
+		font-family: 'Roboto', sans-serif;
+	}
+
+	#title {
+		font-size: 28px;
+		margin: 20px auto 20px auto;
+		padding: 4px;
+		display: block;
+		border: none;
+		border-bottom: #aaa solid 1px;
+		text-align: center;
+		width: 500px;
+	}
+	#title, #title:focus {
+		outline: none;
+	}
+
+	canvas {
+		margin: 0 auto;
+		display: block;
+	}
+
+	table {
+		width: 828px;
+		margin: 5px auto;
+		border-collapse: collapse;
+		box-shadow: 0px 3px 5px rgba(128,128,128, 0.4);
+	}
+
+	thead {
+		background-color: #34495e;
+		color: #fff;
+	}
+	thead>tr>th {
+		padding: 8px 0;
+	}
+	tbody:before, tbody:after {
+	  content: '';
+	  display: block;
+	  height: 5px;
+	}
+	td {
+		text-align: center;
+		padding: 3px 0;
+		font-size: 14px;
+	}
+	td > input, td > input:focus {
+		font-size: 14px;
+		padding: 2px;
+		border: none;
+		margin: 2px 0;
+		border-bottom: #aaa solid 1px;
+		text-align: center;
+		width: 50px;
+		outline: none;
+	}
+	.comments > input, .comments > input:focus {
+		width: 200px;
+	}
+
+	.buttonContainer {
+		width: 828px;
+		margin: 10px auto;
+	}
+
+	.modal {
+		position: fixed; 
+		width: 1000px;
+		min-height: 100px;
+		top: 100px;
+		left: 0; right: 0;
+		margin: 0 auto;
+		opacity: 1;
+		background-color: #fff;
+		transition: opacity 0.5s;
+	}
+
+	.shade {
+		display: block;
+		width: 200vw;
+		height: 200vh;
+		background-color: rgba(0,0,0,0.5);
+		position: fixed;
+		left: -50vw;
+		top: -50vh;
+		opacity: 1;
+		transition: opacity 0.5s;
+	}
+
+	.shade.hide, .modal.hide {
+		opacity: 0;
+	}
+
+	.shade.behind, .modal.behind {
+		z-index: -5;
+	}
+
+	.modal > div {
+		background-color: #34495e;
+		color: #fff;
+		text-align: center;
+		padding: 10px;
+		z-index: 10;
+	}
+
+	.close {
+		position: absolute;
+		display: inline-block;
+		right: 15px;
+		cursor: pointer;
+		color: #ccc;
+		transition: color 0.15s;
+	}
+
+	.close:hover {
+		color: #fff;
+	}
+	pre {
+		padding: 0 20px;
+		font-size: 14px;
+		font-family: 'Source Code Pro', monospace !important;
+	}
+
+	button {
+		background-color: #2980b9;
+	    border: none;
+	    padding: 7px 12px;
+	    border-radius: 4px;
+	    color: #fff;
+	    cursor: pointer;
+	    font-size: 12px;
+	    transition: background-color 0.25s
+	}
+
+	button:hover {
+		background-color: #3498db;
+	}
+
+	button:focus {
+		outline: none;
+	}
+
+	td > button {
+		background-color: #e74c3c;
+	}
+
+	td > button:hover {
+		background-color: #f85a4b;
+	}
+	</style>
+</head>
+<body onload="init()">
+	<input id="title" placeholder="Title">
+	<canvas id="field"></canvas>
+	<div class="buttonContainer">
+		<button onclick="addPoint()">Add Point</button>
+		<!-- <button onclick="update()">Update</button> -->
+		<button onclick="exportData()">Download</button>
+		<button onclick="showData()">Display Path</button>
+		<button onclick="importData()">Import</button>
+		<button onclick="flipField()">Flip Field</button>
+		<span style="font-size: 15px; float: right;">Is reversed: <input type="checkbox" id="isReversed"></span>
+	</div>
+	<table>
+		<thead>
+			<th>X</th>
+			<th>Y</th>
+			<th>Radius</th>
+			<th>Speed</th>
+			<th>Comments</th>
+			<th>Delete</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="x"><input value="50"></td>
+				<td class="y"><input value="50"></td>
+				<td class="radius"><span>0</span></td>
+				<td class="speed"><span>0</span></td>
+				<td class="comments"><input placeholder="Comments"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="shade hide behind" onclick="closeModal()"></div>
+	<div class="modal hide behind">
+		<div><span id="modalTitle">UntitledPath.java</span><span class="close" onclick="closeModal()">✕</span></div>
+		<pre>
+			Hello, there
+		</pre>
+	</div>
+
+	<input type="file" id="upl" style="display:none;">
+</body>
+</html>

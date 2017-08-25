@@ -1,0 +1,19 @@
+#!/bin/sh
+
+prev_video_status=0
+video_status=0
+update_video_status() {
+    video_status=`ls -l /dev/video*`
+}
+update_video_status
+
+while true; do
+    update_video_status
+    if [[ $video_status != $prev_video_status ]] ; then
+        echo "video device changed"
+        v4l2-ctl -c focus_auto=0 -d /dev/v4l/by-id/usb-046d_HD_Pro_Webcam_C920_0297F65F-video-index0
+        /etc/init.d/mjpg-streamer restart
+        prev_video_status=$video_status
+    fi
+    sleep 1
+done

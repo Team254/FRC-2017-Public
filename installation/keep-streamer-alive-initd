@@ -1,0 +1,31 @@
+#!/bin/sh
+
+startdaemon() {
+    echo -n "Starting keep streamer alive"
+    /usr/sbin/start-stop-daemon -b \
+                                --exec /usr/local/bin/keep_streamer_alive --start
+    echo "."
+}
+
+stopdaemon() {
+    echo -n "Stopping keep streamer alive"
+    /usr/sbin/start-stop-daemon --exec /usr/local/bin/keep_streamer_alive --stop
+    echo "."
+}
+
+case "$1" in
+    start)
+        startdaemon
+        ;;
+    stop)
+        stopdaemon
+        ;;
+    force-reload|restart|reload)
+        stopdaemon
+        startdaemon
+        ;;
+    *)
+        echo "Usage: {start|stop|restart|reload|force-reload}" >&2
+        exit 1
+        ;;
+esac
