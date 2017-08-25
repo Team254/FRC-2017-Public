@@ -60,7 +60,7 @@ Point your browser at `file:///Users/*YOUR_USERNAME*/pofs/robot/FRC-2017/logger/
 
 - Path generation and visualization via JavaScript app
 
-	[Cheesy path](cheesy_path), and external JavaScript app. is used for fast and simple path creation.  The app allows a user to create, visualize, export, and import autonomous paths.
+	[Cheesy path](cheesy_path), an external JavaScript app. is used for fast and simple path creation.  The app allows a user to create, visualize, export, and import autonomous paths.
 
 - Self-test modes for each subsystem
 
