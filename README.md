@@ -25,30 +25,6 @@ FRC-2017
 - You can now write code with auto-complete in IntelliJ, but not build/deploy
 - In IntelliJ, in the "ant build" pane, add `FRC-2017/build.xml`. To deploy code to the robot, double click `athena-project-build.build`
 
-## How to run CheesyLogger
-
-You'll need to install Mosquitto on your machine. On osx that's:
-
-```
-$ brew install mosquitto
-```
-
-There's probably a compatible apt-get package for linux (I haven't looked at time of writing).
-
-In CheesyLogger.java, change the mqtt server url to be your laptop. You can use your IP, or your mDNS record. Mine is `tcp://leighpauls-mbp.synergy.bcp.org:1883`.
-
-Run the mqtt broker server:
-```
-~/pofs/robot/FRC-2017 $ ./logger/run_mqtt_server.sh
-1453174940: mosquitto version 1.4.5 (build date 2015-11-09 14:23:18-0800) starting
-1453174940: Config loaded from ./logger/mosquitto.conf.
-1453174940: Opening ipv4 listen socket on port 1883.
-1453174940: Opening ipv6 listen socket on port 1883.
-1453174940: Opening websockets listen socket on port 11883.
-```
-
-Point your browser at `file:///Users/*YOUR_USERNAME*/pofs/robot/FRC-2017/logger/logger.html` (replacing the path with wherever your repo lives).
-
 ## Code Highlights
 - Lag-compensating auto targeting code
 
