@@ -21,7 +21,7 @@ FRC-2017
 ```
 - In intelliJ, you should be in the "project settings" window. Create a new module from existing sources on the `FRC-2017` folder, IntelliJ should pick up `src/` as the content root.
 - In the project settings window, add a new Java library for wiplib. Select all the jars in `~/wpilib/java/current/libs/`. It'll give it a wonky name like "networktables", but that doesn't matter. Choose to include it in the `FRC-2017` project.
-- In project settings, under the "prject section" set your JDK to Java 1.8
+- In project settings, under the "project section" set your JDK to Java 1.8
 - You can now write code with auto-complete in IntelliJ, but not build/deploy
 - In IntelliJ, in the "ant build" pane, add `FRC-2017/build.xml`. To deploy code to the robot, double click `athena-project-build.build`
 
