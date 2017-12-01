@@ -22,15 +22,17 @@ public class BoilerGearThenShootModeBlue extends AutoModeBase {
 
     @Override
     protected void routine() throws AutoModeEndedException {
-        runAction(new WaitAction(2));
         PathContainer gearPath = new StartToBoilerGearBlue();
-        runAction(new ResetPoseFromPathAction(gearPath));
-        runAction(new DrivePathAction(gearPath));
-        runAction(new DeployIntakeAction());
-        runAction(new ScoreGearAction());
-        runAction(new DrivePathAction(new BoilerGearToShootBlue()));
-        runAction(new BeginShootingAction());
-        runAction(new WaitAction(15));
-        runAction(new EndShootingAction());
+        runActions(
+                new WaitAction(2),
+                new ResetPoseFromPathAction(gearPath),
+                new DrivePathAction(gearPath),
+                new DeployIntakeAction(),
+                new ScoreGearAction(),
+                new DrivePathAction(new BoilerGearToShootBlue()),
+                new BeginShootingAction(),
+                new WaitAction(15),
+                new EndShootingAction()
+        );
     }
 }

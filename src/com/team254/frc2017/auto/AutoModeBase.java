@@ -2,6 +2,8 @@ package com.team254.frc2017.auto;
 
 import com.team254.frc2017.auto.actions.Action;
 
+import java.util.Arrays;
+
 /**
  * An abstract class that is the basis of the robot's autonomous routines. This is implemented in auto modes (which are
  * routines that do actions).
@@ -60,6 +62,12 @@ public abstract class AutoModeBase {
         }
 
         action.done();
+    }
+
+    public void runActions(Action... actions) throws AutoModeEndedException {
+        for (Action action : actions) {
+            runAction(action);
+        }
     }
 
 }
